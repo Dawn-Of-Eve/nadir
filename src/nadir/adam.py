@@ -17,13 +17,13 @@ import torch
 from dataclasses import dataclass
 
 from .BaseOptimiser import BaseOptimizer
-from .BaseOptimiser import DoEConfig
+from .BaseOptimiser import BaseConfig
 from typing import Dict, Tuple, Any, Optional
 
 __all__ = ['Adam']
 
 @dataclass
-class AdamConfig(DoEConfig):
+class AdamConfig(BaseConfig):
     lr : float = 1e-3
     betas: Tuple[float, float] = (0.9, 0.99)
     eps: float = 1e-16
