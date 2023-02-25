@@ -220,7 +220,7 @@ def mnist_tester(optimizer=None, args = None, largs = None):
 if __name__ == '__main__' :
 
     # Initialising the WANDB project
-    run = wandb.init(project="MNIST", entity="dawn-of-eve")
+    run = wandb.init(project="MNIST")
     run.name = f'{largs.run_name}'
     run.config.update(args)
     run.config.update(largs)
