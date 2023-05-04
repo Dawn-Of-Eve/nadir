@@ -49,7 +49,7 @@ args.betas : Tuple[float, float] = (0.9, 0.999)
 args.eps : float = 1e-8
 args.optimizer : Any = nd.SGD
 
-with open("random_seeds.txt", 'r') as file:
+with open("tests/random_seeds.txt", 'r') as file:
     file_str = file.read().split('\n')
     seeds = [int(num) for num in file_str]
 args.random_seeds : List[int] = seeds
@@ -183,6 +183,7 @@ def mnist_tester(model, optimizer=None, args = None):
     
     set_seed(args.random_seeds[0])
     device = args.device
+    model=model.to(device)
     use_cuda = True if device == torch.device('cuda') else False
     train_loader, test_loader = prepare_loaders(args, use_cuda)
 

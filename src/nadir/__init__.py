@@ -25,7 +25,14 @@ from .lion import Lion, LionConfig
 from .momentum import Momentum, MomentumConfig
 from .rmsprop import RMSProp, RMSPropConfig
 from .radam import Radam, RadamConfig
+from .nadam import Nadam, NadamConfig
+from .NAG import NAG, NAGConfig
+from .amsgrad import AMSGrad, AMSGradConfig
 from .sgd import SGD, SGDConfig
+from .adamw import AdamW, AdamWConfig
+from .adabelief import Adabelief, AdabeliefConfig
+
+
 
 
 __version__ = "0.1.1"
@@ -54,4 +61,11 @@ __all__ = ('Adadelta',
            'Radam',
            'RadamConfig',
            'SGD',
-           'SGDConfig')
+           'SGDConfig',
+           'AdamW',
+           'AdamWConfig',
+           'Adabelief', 
+           'AdabeliefConfig',
+           'AMSGrad',
+           'AMSGradConfig')
+
